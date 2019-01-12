@@ -6,5 +6,5 @@ export class Quotes {
     author: string;
     upVotes: number;
     downVotes: number;
-    timePublished: number|string;
+    timePublished: string | number;
 }

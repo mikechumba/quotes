@@ -1,4 +1,5 @@
 import { Quotes } from './quotes';
+import { getLocaleTimeFormat } from '@angular/common';
 
 export const QuoteSamples: Quotes[] = [
     {
@@ -26,6 +27,6 @@ export const QuoteSamples: Quotes[] = [
         author: 'Laurie Halse Anderson',
         upVotes: 0,
         downVotes: 0,
-        timePublished: '5wks Ago',
+        timePublished: '5 Hrs Ago',
     }
 ];

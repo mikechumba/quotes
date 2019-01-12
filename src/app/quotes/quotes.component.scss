@@ -9,32 +9,70 @@ li {
 
 .card {
     box-sizing: border-box;
-    margin: 15% 1% 0 1%;
+    margin: 6% 1% 0 1%;
     height: 20%;
     box-shadow: 1px 1px 20px 5px #333;
     
     .quote {
         height: 50vh;
         overflow: hidden;
+        
+        .main-quote {
 
-        p {
-            padding: 0 15px;
-            margin: 10%;
-            font-family: $quote-font;
-            color: #223843;
-            font-size: 2.5vw;
+            height: 50%;
+
+            p {
+                padding: 0 15px;
+                margin: 10% 0 5% 0;
+                font-family: $quote-font;
+                color: #223843;
+                font-size: 100%;
+            } 
         }
 
         .details {
-            padding: 5px 15px;
+            padding: 15px 15px;
 
             span {
                 font-family: $other-font;
                 font-size: 14px;
+                
+                #upvotes {
+                    color: #223843;
+                    &:before {
+                        font-family: 'Material Icons';
+                        content: '/thumb_up_alt';   
+                        color: #4EA699;
+                    }
+                }
             }
+
+            p {
+                font-family: $other-font;
+                font-size: 13px;
+            }
+
+
         }
     }
 
     
+}
+
+.btn {
+    border: 2px solid #223843;
+    background-color: transparent;
+    text-transform: uppercase;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #223843;
+    align-items: flex-start;
+    margin-top: 10%;
+
+    &:hover {
+        border: 2px solid #C2C1C2; 
+        background-color: #C2C1C2;
+    }
 }
 

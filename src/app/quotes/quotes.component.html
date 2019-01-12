@@ -1,4 +1,7 @@
+
 <div class='container'>
+  <button class='btn' (click)='showForm'>+ Add Quote</button>
+
   <div class='row'>
     <li *ngFor="let quote of quotes" class='card col'>
       <div class='quote'>
@@ -7,8 +10,12 @@
           <span class='text-right'>{{quote.timePublished}}</span>
         </div>
         <!-- Quote goes here -->
-        <p>{{quote.quote}}</p>
-        <div>
+        <div class='main-quote'>
+          <p>{{quote.quote}}</p>
+        </div>
+        
+        <div class='details'>
+          <p>{{quote.author}}</p>
           <span id='upvotes'>{{quote.upVotes}}</span>
           <span id='downvotes'>{{quote.downVotes}}</span>
         </div>
