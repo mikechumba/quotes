@@ -1,7 +1,7 @@
 
 <div class='container'>
-  <button class='btn' (click)='showForm'>+ Add Quote</button>
-
+  <button class='btn' (click)='showForm()'>+ Add Quote</button>
+  <app-quote-form></app-quote-form>
   <div class='row'>
     <li *ngFor="let quote of quotes" class='card col'>
       <div class='quote'>

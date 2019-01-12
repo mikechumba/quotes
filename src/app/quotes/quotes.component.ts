@@ -16,4 +16,9 @@ export class QuotesComponent implements OnInit {
   ngOnInit() {
   }
 
+  showForm() {
+    $('.row').hide();
+    $('app-component-form').show();
+  }
+
 }
