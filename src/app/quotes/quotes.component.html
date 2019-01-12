@@ -6,18 +6,24 @@
     <li *ngFor="let quote of quotes" class='card col'>
       <div class='quote'>
         <div class='details'>
-          <span class='text-left'>{{quote.name}}</span>
-          <span class='text-right'>{{quote.timePublished}}</span>
+          <span class='to-left'>{{quote.name}}</span>
+          <span class='to-right'>{{quote.timePublished}}</span>
         </div>
         <!-- Quote goes here -->
         <div class='main-quote'>
-          <p>{{quote.quote}}</p>
+          <p>"{{quote.quote}}"</p>
         </div>
         
         <div class='details'>
-          <p>{{quote.author}}</p>
-          <span id='upvotes'>{{quote.upVotes}}</span>
-          <span id='downvotes'>{{quote.downVotes}}</span>
+          <p id='author'>- {{quote.author}}</p>
+          <span id='upvotes'>
+            <i class="material-icons">thumb_up_alt</i>
+            {{quote.upVotes}}
+          </span>
+          <span id='downvotes'>
+            <i class="material-icons">thumb_up_alt</i>
+            {{quote.downVotes}}
+          </span>
         </div>
 
       </div>

@@ -1,5 +1,11 @@
 $other-font: 'Open Sans', sans-serif;
 $quote-font: 'Playfair Display', serif;
+@mixin details($float, $size, $weight: normal) {
+    float: $float;
+    font-weight: $weight;
+    font-size: $size;
+    color: #B1B0B1;
+}
 
 li {
     display: inline;
@@ -30,23 +36,30 @@ li {
                 padding: 0 15px;
                 margin: 10% 0 5% 0;
                 font-family: $quote-font;
-                color: #223843;
+                color: #474747;
                 font-size: 100%;
             } 
         }
 
         .details {
             padding: 15px 15px;
-
+            width: 100%;
             span {
                 font-family: $other-font;
-                font-size: 14px;
+                
+                
+                #author {
+                    font-weight: 600;
+                    font-size: 15px;
+                }
                 
                 #upvotes {
                     color: #223843;
+                    padding: 0 10px;
                     &:before {
+                        position: absolute;
                         font-family: 'Material Icons';
-                        content: '/thumb_up_alt';   
+                        content: '\thumb_up_alt';   
                         color: #4EA699;
                     }
                 }
@@ -81,3 +94,10 @@ li {
     }
 }
 
+.to-left {
+    @include details(left, 13px, 600);
+}
+
+.to-right {
+    @include details(right, 12px);
+}
