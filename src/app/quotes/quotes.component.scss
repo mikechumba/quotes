@@ -1,0 +1,40 @@
+$other-font: 'Open Sans', sans-serif;
+$quote-font: 'Playfair Display', serif;
+
+li {
+    display: inline;
+    text-decoration: none;
+    outline: none;
+}
+
+.card {
+    box-sizing: border-box;
+    margin: 15% 1% 0 1%;
+    height: 20%;
+    box-shadow: 1px 1px 20px 5px #333;
+    
+    .quote {
+        height: 50vh;
+        overflow: hidden;
+
+        p {
+            padding: 0 15px;
+            margin: 10%;
+            font-family: $quote-font;
+            color: #223843;
+            font-size: 2.5vw;
+        }
+
+        .details {
+            padding: 5px 15px;
+
+            span {
+                font-family: $other-font;
+                font-size: 14px;
+            }
+        }
+    }
+
+    
+}
+

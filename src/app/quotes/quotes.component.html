@@ -1,1 +1,21 @@
+<div class='container'>
+  <div class='row'>
+    <li *ngFor="let quote of quotes" class='card col'>
+      <div class='quote'>
+        <div class='details'>
+          <span class='text-left'>{{quote.name}}</span>
+          <span class='text-right'>{{quote.timePublished}}</span>
+        </div>
+        <!-- Quote goes here -->
+        <p>{{quote.quote}}</p>
+        <div>
+          <span id='upvotes'>{{quote.upVotes}}</span>
+          <span id='downvotes'>{{quote.downVotes}}</span>
+        </div>
+
+      </div>
+    </li>
+  </div>
+</div>
+
 
