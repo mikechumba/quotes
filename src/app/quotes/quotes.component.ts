@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuoteSamples } from './sample-quotes';
 
+
 @Component({
   selector: 'app-quotes',
   templateUrl: './quotes.component.html',
@@ -8,6 +9,8 @@ import { QuoteSamples } from './sample-quotes';
 })
 
 export class QuotesComponent implements OnInit {
+
+  add = true;
 
   constructor() { }
 
@@ -17,8 +20,9 @@ export class QuotesComponent implements OnInit {
   }
 
   showForm() {
-    $('.row').hide();
-    $('app-component-form').show();
+    $('.row').toggle();
+    $('.form-group').toggle();
+    this.add = !this.add;
   }
 
 }

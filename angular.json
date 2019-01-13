@@ -22,8 +22,8 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "baseHref" : "dist/Quotes/",
-            "deployUrl": "dist/Quotes/",
+            "baseHref" : "/Quotes/",
+            "deployUrl": "/Quotes/",
             "assets": [
               "src/favicon.ico",
               "src/assets"

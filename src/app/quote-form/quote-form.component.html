@@ -3,29 +3,35 @@
   
   <form [formGroup]="quotesForm" (ngSubmit)="publish()">
     <div class='input-group'>
-        <input type="text" class='quote-details' placeholder="Enter Your Name" id="username" formControlName='name' required>
-        <input type="text" class='quote-details' placeholder="Enter Author's Name" id="author" formControlName='author' required>
+      <input type="text" class='quote-details' placeholder="Enter Your Name" id="username" formControlName='name' required>
+      <input type="text" class='quote-details' placeholder="Enter Author's Name" id="author" formControlName='author' required>
     </div>
     <div class='input-group'>
-        <input class='quote-input' type="text" placeholder="Enter Quote" id="actual-quote" formControlName='quote' required>
+      <input class='quote-input' type="text" placeholder="Enter Quote" id="actual-quote" formControlName='quote' required>
     </div>
-    <!-- Validation Errors-->
+    <div>
+      <input type="hidden" formControlName='timePublished' value="currentDate()">
+      <input type="hidden" formControlName='upVotes' value="defaultVote()">
+      <input type="hidden" formControlName='downVotes' value="defaultVote()">
+    </div>
+
+    <!-- Validation Errors -->
     <div *ngIf="name.touched && name.errors">
       <div class="alert" *ngIf="name.errors.required">
         You must enter your name.
       </div>
     </div>
-    <div *ngIf="author.errors">
-      <div class="alert" *ngIf="name.errors.pattern">
+    <div *ngIf="author.touched && author.errors">
+      <div class="alert" *ngIf="author.errors.pattern">
           Required! . Input 'Anonymous' if you don't know the author.
       </div>
     </div>
-    <div *ngIf="quote.errors">
+    <div *ngIf="quote.touched && quote.errors">
       <div class="alert" *ngIf="quote.errors.pattern">
-          Required! . Input 'Anonymous' if you don't know the author.
+          "I don't hate quotes. I require them."
       </div>
     </div>
     <!-- Submit Form -->
-    <input class='submit-btn' type="submit" [disabled]="!quotesForm.value" value="Publish">
+    <input class='submit-btn' type="button" [disabled]="!quotesForm.valid" value="Publish">
   </form> 
 </div>

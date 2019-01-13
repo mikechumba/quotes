@@ -53,16 +53,26 @@ li {
                     font-size: 15px;
                 }
                 
-                #upvotes {
-                    color: #223843;
-                    padding: 0 10px;
-                    &:before {
-                        position: absolute;
-                        font-family: 'Material Icons';
-                        content: '\thumb_up_alt';   
-                        color: #4EA699;
+                
+            }
+
+            .votes {
+                display: inline-block;
+
+                span {
+                    display: inline-block;
+
+                    p {
+                        font-size: 13px;
+                        color: #474747;
+                        padding: 0 10px;  
+                    }
+    
+                    i {
+                        font-size: 20px;
                     }
                 }
+                
             }
 
             p {

@@ -1,6 +1,9 @@
 
 <div class='container'>
-  <button class='btn' (click)='showForm()'>+ Add Quote</button>
+  <button class='btn' (click)='showForm()' *ngIf="add; else exitForm">+ Add Quote</button>
+  <ng-template #exitForm>
+    <button class='btn' (click)='showForm()'>Cancel</button>
+  </ng-template>
   <app-quote-form></app-quote-form>
   <div class='row'>
     <li *ngFor="let quote of quotes" class='card col'>
@@ -16,14 +19,16 @@
         
         <div class='details'>
           <p id='author'>- {{quote.author}}</p>
-          <span id='upvotes'>
-            <i class="material-icons">thumb_up_alt</i>
-            {{quote.upVotes}}
-          </span>
-          <span id='downvotes'>
-            <i class="material-icons">thumb_up_alt</i>
-            {{quote.downVotes}}
-          </span>
+          <div class='votes'>
+            <span (click)='upVote()'>
+              <i class="material-icons">thumb_up_alt</i>
+              <p>{{quote.upVotes}} Likes</p>
+            </span>
+            <span (click)='downVote()'>
+              <i class="material-icons">thumb_down_alt</i>
+              <p>{{quote.downVotes}} Dislikes</p>
+            </span>
+          </div>
         </div>
 
       </div>
