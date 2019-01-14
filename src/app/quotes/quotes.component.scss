@@ -26,7 +26,7 @@ li {
     .quote {
         height: 50vh;
         overflow: hidden;
-        
+               
         .main-quote {
 
             height: 49%;
@@ -71,6 +71,10 @@ li {
 
             span {
                 display: inline-block;
+
+                &:hover {
+                    cursor: pointer;
+                }
 
                 p, i {
                     display: inline-block;

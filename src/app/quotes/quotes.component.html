@@ -20,11 +20,11 @@
         <div class='details'>
           <p id='author'>- {{quoted.author}}</p>
           <div class='votes'>
-            <span (click)='upVote()'>
+            <span id="upvote" (click)='upVotes(quoted, i)'>
               <i class="material-icons">thumb_up_alt</i>
               <p>{{quoted.upVotes}} Likes</p>
             </span>
-            <span (click)='downVote()'>
+            <span id="downvote" (click)='downVotes(quoted, i)'>
               <i class="material-icons">thumb_down_alt</i>
               <p>{{quoted.downVotes}} Dislikes</p>
             </span>

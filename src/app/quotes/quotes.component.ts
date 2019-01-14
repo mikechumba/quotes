@@ -13,6 +13,10 @@ import { QuoteFormComponent } from './../quote-form/quote-form.component';
 export class QuotesComponent implements OnInit {
 
   add = true;
+  voted = false;
+  notVoted = true;
+
+  currentUpVotes: number;
 
   constructor() { }
 
@@ -39,12 +43,45 @@ export class QuotesComponent implements OnInit {
     }
   }
 
+  upVotes(quoteInput) {
+    this.voted = !this.voted;
+    const index: number = this.quotes.indexOf(quoteInput);
+    if (index !== -1 && this.voted) {
+      this.quotes[index].upVotes++;
+      $('#upvote').css('color', '#4EA699');
+    } else {
+      this.quotes[index].upVotes--;
+      $('#upvote').css('color', '#474747');
+    }
+    this.currentUpVotes = this.quotes[index].upVotes;
+  }
+
+  downVotes(quoteInput) {
+    this.notVoted = !this.notVoted;
+    const index: number = this.quotes.indexOf(quoteInput);
+    if (index !== -1 && this.notVoted) {
+      this.quotes[index].downVotes--;
+      $('#downvote').css('color', '#4EA699');
+    } else {
+      this.quotes[index].downVotes++;
+      $('#downvote').css('color', '#474747');
+    }
+    this.currentUpVotes = this.quotes[index].upVotes;
+  }
+
   ngOnInit() {
   }
 
   showForm() {
     $('.form-group').toggle();
     this.add = !this.add;
+  }
+
+  highlight(quoteInput) {
+    const index: number = this.quotes.indexOf(quoteInput);
+    if (this.currentUpVotes > 5) {
+      $('.card').css('background-color', '#C2C1C2');
+    }
   }
 
 }
