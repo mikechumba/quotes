@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Quotes } from './../quotes/quotes';
 import { QuoteSamples } from './../quotes/sample-quotes';
+import { Quote } from '@angular/compiler';
 
 @Component({
   selector: 'app-quote-form',
@@ -14,31 +15,11 @@ export class QuoteFormComponent implements OnInit {
 
   votes: number;
 
-  constructor(public formbuilder: FormBuilder) {
-    this.quotesForm = new FormGroup ({
-      name: new FormControl(),
-      author: new FormControl(),
-      quote: new FormControl(),
-      timePublished: new FormControl(),
-      upVotes: new FormControl(),
-      downVotes: new FormControl()
-    });
-  }
+  userQuote = new Quotes ('', '', '', this.defaultVote(), this.defaultVote(), this.currentDate());
+  @Output() newQuotes = new EventEmitter<Quotes>();
 
-
-  ngOnInit() {
-  }
-
-  get name() {
-    return this.quotesForm.get('name');
-  }
-
-  get author() {
-    return this.quotesForm.get('author');
-  }
-
-  get quote() {
-    return this.quotesForm.get('quote');
+  publish() {
+    this.newQuotes.emit(this.userQuote);
   }
 
   currentDate() {
@@ -50,16 +31,7 @@ export class QuoteFormComponent implements OnInit {
     return this.votes;
   }
 
-
-  publish() {
-    const result: Quotes = this.quotesForm.value;
-
-    QuoteSamples.push(result);
-
-    console.log(this.quotesForm.value);
-
-    this.quotesForm.reset();
-
+  ngOnInit() {
   }
 
 }

@@ -1,20 +1,19 @@
 
 <div class='form-group'>
   
-  <form [formGroup]="quotesForm" (ngSubmit)="publish()">
+  <form [formGroup]="quotesForm" (ngSubmit)="publish()" #quotesForm = 'ngForm'>
     <div class='input-group'>
-      <input type="text" class='quote-details' placeholder="Enter Your Name" id="username" formControlName='name' required>
-      <input type="text" class='quote-details' placeholder="Enter Author's Name" id="author" formControlName='author' required>
+      <input type="text" class='quote-details' placeholder="Enter Your Name" id="username" formControlName='name' required [(ngModel)] = 'userQuote.name'>
+      <input type="text" class='quote-details' placeholder="Enter Author's Name" id="author" formControlName='author' required [(ngModel)] = 'userQuote.author'>
     </div>
     <div class='input-group'>
-      <input class='quote-input' type="text" placeholder="Enter Quote" id="actual-quote" formControlName='quote' required>
+      <input class='quote-input' type="text" placeholder="Enter Quote" id="actual-quote" formControlName='quote' required [(ngModel)] = 'userQuote.quote'>
     </div>
     <div>
-      <input type="hidden" formControlName='timePublished' value="currentDate()">
-      <input type="hidden" formControlName='upVotes' value="defaultVote()">
-      <input type="hidden" formControlName='downVotes' value="defaultVote()">
+      <input type="hidden" formControlName='timePublished' value="currentDate()" [(ngModel)] = 'userQuote.timePublished'>
+      <input type="hidden" formControlName='upVotes' value="defaultVote()" [(ngModel)] = 'userQuote.upVotes'>
+      <input type="hidden" formControlName='downVotes' value="defaultVote()" [(ngModel)] = 'userQuote.downVotes'>
     </div>
-
     <!-- Validation Errors -->
     <div *ngIf="name.touched && name.errors">
       <div class="alert" *ngIf="name.errors.required">
@@ -32,6 +31,6 @@
       </div>
     </div>
     <!-- Submit Form -->
-    <input class='submit-btn' type="button" [disabled]="!quotesForm.valid" value="Publish">
+    <input class='submit-btn' type="submit" [disabled]="!quotesForm.valid" value="Publish">
   </form> 
 </div>
