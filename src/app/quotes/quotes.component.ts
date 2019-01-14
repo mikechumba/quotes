@@ -1,8 +1,7 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 // import { QuoteSamples } from './sample-quotes';
 import { Quotes } from './quotes';
 import { QuoteFormComponent } from './../quote-form/quote-form.component';
-
 
 
 @Component({

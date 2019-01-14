@@ -6,27 +6,27 @@
   </ng-template>
   <app-quote-form (newQuotes) = "addQuote($event)"></app-quote-form>
   <div class='row'>
-    <li *ngFor="let quote of quotes" class='card col'>
+    <li *ngFor="let quoted of quotes" class='card col'>
       <div class='quote'>
         <div class='details'>
-          <span class='to-left'>{{quote.name}}</span>
-          <span class='to-right'>{{quote.timePublished}}</span>
+          <span class='to-left'>{{quoted.name}}</span>
+          <span class='to-right'>{{quoted.timePublished}}</span>
         </div>
         <!-- Quote goes here -->
         <div class='main-quote'>
-          <p>"{{quote.quote}}"</p>
+          <p>"{{quoted.quote}}"</p>
         </div>
         
         <div class='details'>
-          <p id='author'>- {{quote.author}}</p>
+          <p id='author'>- {{quoted.author}}</p>
           <div class='votes'>
             <span (click)='upVote()'>
               <i class="material-icons">thumb_up_alt</i>
-              <p>{{quote.upVotes}} Likes</p>
+              <p>{{quoted.upVotes}} Likes</p>
             </span>
             <span (click)='downVote()'>
               <i class="material-icons">thumb_down_alt</i>
-              <p>{{quote.downVotes}} Dislikes</p>
+              <p>{{quoted.downVotes}} Dislikes</p>
             </span>
           </div>
         </div>

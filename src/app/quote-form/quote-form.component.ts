@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { Quotes } from './../quotes/quotes';
+import { FormGroup } from '@angular/forms';
+import { Quotes } from '../quotes/quotes';
 // import { QuoteSamples } from './../quotes/sample-quotes';
 import { Quote } from '@angular/compiler';
 
@@ -15,11 +15,13 @@ export class QuoteFormComponent implements OnInit {
 
   votes: number;
 
-  userQuote = new Quotes ('', '', '', this.defaultVote(), this.defaultVote(), this.currentDate());
+  userQuote = new Quotes (' ', ' ', ' ', this.defaultVote(), this.defaultVote(), this.currentDate());
   @Output() newQuotes = new EventEmitter<Quotes>();
 
   publish() {
     this.newQuotes.emit(this.userQuote);
+
+    this.quotesForm.reset();
   }
 
   currentDate() {
