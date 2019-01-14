@@ -1,18 +1,18 @@
 
 <div class='form-group'>
   
-  <form [formGroup]="quotesForm" (ngSubmit)="publish()" #quotesForm = 'ngForm'>
+  <form (ngSubmit)="publish()" #quotesForm = 'ngForm'>
     <div class='input-group'>
-      <input type="text" class='quote-details' placeholder="Enter Your Name" id="username" formControlName='name' required [(ngModel)] = 'userQuote.name'>
-      <input type="text" class='quote-details' placeholder="Enter Author's Name" id="author" formControlName='author' required [(ngModel)] = 'userQuote.author'>
+      <input type="text" class='quote-details' placeholder="Enter Your Name" id="username" required [(ngModel)] = 'userQuote.name'>
+      <input type="text" class='quote-details' placeholder="Enter Author's Name" id="author" required [(ngModel)] = 'userQuote.author'>
     </div>
     <div class='input-group'>
-      <input class='quote-input' type="text" placeholder="Enter Quote" id="actual-quote" formControlName='quote' required [(ngModel)] = 'userQuote.quote'>
+      <input class='quote-input' type="text" placeholder="Enter Quote" id="actual-quote" required [(ngModel)] = 'userQuote.quote'>
     </div>
     <div>
-      <input type="hidden" formControlName='timePublished' value="currentDate()" [(ngModel)] = 'userQuote.timePublished'>
-      <input type="hidden" formControlName='upVotes' value="defaultVote()" [(ngModel)] = 'userQuote.upVotes'>
-      <input type="hidden" formControlName='downVotes' value="defaultVote()" [(ngModel)] = 'userQuote.downVotes'>
+      <input type="hidden" value="currentDate()" [(ngModel)] = 'userQuote.timePublished'>
+      <input type="hidden" value="defaultVote()" [(ngModel)] = 'userQuote.upVotes'>
+      <input type="hidden" value="defaultVote()" [(ngModel)] = 'userQuote.downVotes'>
     </div>
     <!-- Validation Errors -->
     <div *ngIf="name.touched && name.errors">

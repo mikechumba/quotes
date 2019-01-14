@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Quotes } from './../quotes/quotes';
-import { QuoteSamples } from './../quotes/sample-quotes';
+// import { QuoteSamples } from './../quotes/sample-quotes';
 import { Quote } from '@angular/compiler';
 
 @Component({
