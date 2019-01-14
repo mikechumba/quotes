@@ -14,23 +14,7 @@
       <input name='upVotes' type="hidden" value="defaultVote()" [(ngModel)] = 'userQuote.upVotes'>
       <input name='downVotes' type="hidden" value="defaultVote()" [(ngModel)] = 'userQuote.downVotes'>
     </div>
-    <!-- Validation Errors -->
-    <!-- <div *ngIf="name.touched && name.errors">
-      <div class="alert" *ngIf="name.errors.required">
-        You must enter your name.
-      </div>
-    </div>
-    <div *ngIf="author.touched && author.errors">
-      <div class="alert" *ngIf="author.errors.pattern">
-          Required! . Input 'Anonymous' if you don't know the author.
-      </div>
-    </div>
-    <div *ngIf="quote.touched && quote.errors">
-      <div class="alert" *ngIf="quote.errors.pattern">
-          "I don't hate quotes. I require them."
-      </div>
-    </div> -->
-    <!-- Submit Form -->
+  
     <input class='submit-btn' type="submit" [disabled]="!quotesForm.valid" value="Publish">
   </form> 
 </div>
