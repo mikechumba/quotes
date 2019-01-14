@@ -15,6 +15,8 @@ export class QuoteFormComponent implements OnInit {
 
   votes: number;
 
+  timeDiff: any;
+
   userQuote = new Quotes (' ', ' ', ' ', this.defaultVote(), this.defaultVote(), this.currentDate());
   @Output() newQuotes = new EventEmitter<Quotes>();
 

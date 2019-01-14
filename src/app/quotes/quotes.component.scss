@@ -8,7 +8,6 @@ $quote-font: 'Playfair Display', serif;
 }
 
 li {
-    display: inline;
     text-decoration: none;
     outline: none;
 }
@@ -30,11 +29,11 @@ li {
         
         .main-quote {
 
-            height: 50%;
+            height: 49%;
 
             p {
                 padding: 0 15px;
-                margin: 10% 0 5% 0;
+                margin: 10% 0 2% 0;
                 font-family: $quote-font;
                 color: #474747;
                 font-size: 100%;
@@ -56,24 +55,7 @@ li {
                 
             }
 
-            .votes {
-                display: inline-block;
-
-                span {
-                    display: inline-block;
-
-                    p {
-                        font-size: 13px;
-                        color: #474747;
-                        padding: 0 10px;  
-                    }
-    
-                    i {
-                        font-size: 20px;
-                    }
-                }
-                
-            }
+            
 
             p {
                 font-family: $other-font;
@@ -81,6 +63,30 @@ li {
             }
 
 
+        }
+
+        .votes {
+            width: 100%;
+            margin: 1% 0;
+
+            span {
+                display: inline-block;
+
+                p, i {
+                    display: inline-block;
+                }
+
+                p {
+                    font-size: 13px;
+                    color: #474747;
+                    padding: 0 10px;  
+                }
+
+                i {
+                    font-size: 20px;
+                }
+            }
+            
         }
     }
 
@@ -110,4 +116,12 @@ li {
 
 .to-right {
     @include details(right, 12px);
+}
+
+.delete {
+    label {
+        i{
+            color: #FE938C;
+        }
+    }
 }

@@ -1,5 +1,11 @@
 # Quotes
 
+###### Authored by Michael Kipchumba
+
+[Link to live site](https://mikechumba.github.io/pigdice/)
+
+This is a simple web app where user can view, share and vote for their favorite quotes. 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
 ## Development server

@@ -28,6 +28,17 @@ export class QuotesComponent implements OnInit {
     this.quotes.push(quote);
   }
 
+  // deleteQuote() {
+  //   this.quotes.splice();
+  // }
+
+  deleteQuote(quoteInput) {
+    const index: number = this.quotes.indexOf(quoteInput);
+    if (index !== -1) {
+      this.quotes.splice(index, 1);
+    }
+  }
+
   ngOnInit() {
   }
 
