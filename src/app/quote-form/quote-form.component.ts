@@ -23,7 +23,7 @@ export class QuoteFormComponent implements OnInit {
   publish() {
     this.newQuotes.emit(this.userQuote);
 
-    this.userQuote = new Quotes ('', '' , '', this.defaultVote(), this.defaultVote(), this.currentDate())
+    this.userQuote = new Quotes ('', '' , '', this.defaultVote(), this.defaultVote(), this.currentDate());
 
   }
 
