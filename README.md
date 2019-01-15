@@ -52,7 +52,7 @@ The web app doesn't seem to have any bugs this far. If you happen to come across
 
 MIT License
 
-Copyright (c) 2018 Michael Kipchumba
+Copyright (c) 2019 Michael Kipchumba
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
