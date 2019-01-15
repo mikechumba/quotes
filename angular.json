@@ -18,12 +18,12 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/Quotes",
+            "baseHref" : "/dir",
+            "deployUrl": "/dir",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "baseHref" : "/Quotes/",
-            "deployUrl": "/Quotes/",
             "assets": [
               "src/favicon.ico",
               "src/assets"
