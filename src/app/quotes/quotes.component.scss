@@ -12,10 +12,24 @@ li {
     outline: none;
 }
 
+.quote-row {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 10px;
+    grid-auto-flow: row;
+}
+  
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
 .card {
     box-sizing: border-box;
     margin: 6% 1% 0 1%;
-    height: 20%;
+    height: 56vh;
     border: none;
     box-shadow: 2px 2px 10px 5px rgba(#D8DDEF, 0.3);
     &:hover {

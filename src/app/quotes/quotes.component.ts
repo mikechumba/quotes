@@ -24,15 +24,18 @@ export class QuotesComponent implements OnInit {
   quotes = [
     new Quotes('Andrew Kein', 'Narcotics Anonymous',
       'Insanity is doing the same thing, over and over again, but expecting different results.', 0, 0, new Date()),
-    new Quotes('Andrew Kein', 'Narcotics Anonymous',
-      'Insanity is doing the same thing, over and over again, but expecting different results.', 0, 0, new Date())
+    new Quotes('John Doe', 'George Carlin',
+      'Inside every cynical person, there is a disappointed idealist.', 0, 0, new Date()),
+    new Quotes('Jane Doe', 'V (Alan Moore)',
+      `We are told to remember the idea, not the man, because a man can fail. 
+      He can be caught, he can be killed and forgotten, but 400 years later, an idea can still change the world.`, 0, 0, new Date()),
+
   ];
 
   addQuote(quote) {
     const quoteLength = this.quotes.length;
     this.quotes.push(quote);
   }
-
   // deleteQuote() {
   //   this.quotes.splice();
   // }

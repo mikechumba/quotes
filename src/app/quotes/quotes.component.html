@@ -5,8 +5,8 @@
     <button class='btn' (click)='showForm()'>Cancel</button>
   </ng-template>
   <app-quote-form (newQuotes) = "addQuote($event)"></app-quote-form>
-  <div class='row'>
-    <li *ngFor="let quoted of quotes; let i = index" class='card col'>
+  <div class='quote-row'>
+    <li *ngFor="let quoted of quotes; let i = index" class='column card'>
       <div class='quote'>
         <div class='details'>
           <span class='to-left'>{{quoted.name}}</span>
