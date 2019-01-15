@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // import { QuoteSamples } from './sample-quotes';
 import { Quotes } from './quotes';
 import { QuoteFormComponent } from './../quote-form/quote-form.component';
+import {TimeAgoPipe} from 'time-ago-pipe';
 
 
 @Component({
@@ -22,9 +23,9 @@ export class QuotesComponent implements OnInit {
 
   quotes = [
     new Quotes('Andrew Kein', 'Narcotics Anonymous',
-      'Insanity is doing the same thing, over and over again, but expecting different results.', 0, 0, '5 Hrs Ago'),
+      'Insanity is doing the same thing, over and over again, but expecting different results.', 0, 0, new Date()),
     new Quotes('Andrew Kein', 'Narcotics Anonymous',
-      'Insanity is doing the same thing, over and over again, but expecting different results.', 0, 0, '5 Hrs Ago')
+      'Insanity is doing the same thing, over and over again, but expecting different results.', 0, 0, new Date())
   ];
 
   addQuote(quote) {

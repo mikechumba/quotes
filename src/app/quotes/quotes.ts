@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 
 export class Quotes {
     constructor (
@@ -6,6 +7,6 @@ export class Quotes {
         public quote: string,
         public upVotes: number,
         public downVotes: number,
-        public timePublished: any,
+        public timePublished: object,
         ) {}
 }

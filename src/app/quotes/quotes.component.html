@@ -10,7 +10,7 @@
       <div class='quote'>
         <div class='details'>
           <span class='to-left'>{{quoted.name}}</span>
-          <span class='to-right'>{{quoted.timePublished}}</span>
+          <span class='to-right'>{{quoted.timePublished | date:"MM/dd/yy" | timeAgo }}</span>
         </div>
         <!-- Quote goes here -->
         <div class='main-quote'>
