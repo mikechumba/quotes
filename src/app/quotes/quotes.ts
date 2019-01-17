@@ -7,6 +7,6 @@ export class Quotes {
         public quote: string,
         public upVotes: number,
         public downVotes: number,
-        public timePublished: object,
+        public timePublished: Date,
         ) {}
 }

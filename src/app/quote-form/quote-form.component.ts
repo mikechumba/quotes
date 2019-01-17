@@ -17,13 +17,13 @@ export class QuoteFormComponent implements OnInit {
 
   timeDiff: any;
 
-  userQuote = new Quotes ('', '' , '', this.defaultVote(), this.defaultVote(), this.currentDate());
+  userQuote = new Quotes ('', '', '', this.defaultVote(), this.defaultVote(), new Date());
   @Output() newQuotes = new EventEmitter<Quotes>();
 
   publish() {
     this.newQuotes.emit(this.userQuote);
 
-    this.userQuote = new Quotes ('', '' , '', this.defaultVote(), this.defaultVote(), this.currentDate());
+    this.userQuote = new Quotes ('', '' , '', this.defaultVote(), this.defaultVote(), new Date());
 
   }
 
